@@ -45,11 +45,10 @@
           console.log("Age" + " " + age);
           //   simple in interrest
           Amount = 2000;
-          RateOfInterest = 20;
+          RateOfInterest = 10;
           Duration = 3;
-          Interest = Amount * (20 / 100);
-          simpleInterest = Interest * 3;
-
+          Interest = (Amount * RateOfInterest * Duration) / 100;
+          simpleInterest = Amount + Interest;
           console.log("simpleInterest" + " " + simpleInterest);
 
           // Find velocity of car
@@ -59,8 +58,13 @@
           console.log("VelocityOfCar" + " " + VelocityOfCar);
 
           // compund interest
-          compoundInterest = 1000 + simpleInterest;
-          console.log(compoundInterest);
+          amount = 2000;
+          rateOfInterest = 10;
+          duration = 10;
+          compoundAmount =
+            amount * Math.pow(1 + rateOfInterest / 100, duration);
+          compoundInterest = compoundAmount - amount;
+          console.log("compoundInterest" + " " + compoundInterest.toFixed(0));
         </script>
       </body>
     </html>
